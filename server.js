@@ -11,7 +11,7 @@ var Photo     = require('./app/models/photo');
 
 
 var mongoose   = require('mongoose');
-mongoose.connect('mongodb://localhost/willhancock'); // connect to our database
+mongoose.connect('mongodb://localhost/gallery'); // connect to our database
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -33,7 +33,7 @@ var router = express.Router();              // get an instance of the express Ro
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
-    res.json({ message: 'hooray! welcome to our api!' });   
+    res.json({ message: 'hooray! welcome to our api change!' });   
 });
 
 // more routes for our API will happen here
