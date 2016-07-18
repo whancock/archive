@@ -49,8 +49,10 @@ app.use('/api', router);
 
 router.route('/photos')
 
-    // create a bear (accessed at POST http://localhost:8080/api/bears)
+    /*// create a bear (accessed at POST http://localhost:8080/api/bears)
     .post(function(req, res) {
+
+        console.log('hitting this post function', req);
         
         var photo = new Photo(req.body);      // create a new instance of the Bear model
 
@@ -62,7 +64,7 @@ router.route('/photos')
             res.json({ message: 'Photo created!' });
         });
         
-    })
+    })*/
 
 
     .get(function(req, res) {
@@ -75,7 +77,7 @@ router.route('/photos')
     });
 
 
-router.route('/photos/:photo_id')
+/*router.route('/photos/:photo_id')
 
 	.delete(function(req, res) {
 
@@ -88,7 +90,7 @@ router.route('/photos/:photo_id')
 
             res.json({ message: 'Successfully deleted' });
         });
-    });
+    });*/
 
 
 
